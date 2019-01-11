@@ -4,7 +4,10 @@
 
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.whitecircleschool.demo.RealProjectLevelA2.loginPageTest"/>
+      <class 
+      name="com.whitecircleschool.demo.RealProjectLevelA2.USAAddressTest"></class>     
+      <class
+       name="com.whitecircleschool.demo.RealProjectLevelA2.CanadaAddressTest"></class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

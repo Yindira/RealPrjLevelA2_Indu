@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 public class BaseTest {
@@ -21,11 +22,18 @@ public class BaseTest {
 		
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.get("http://demo.whitecircleschool.com/branches/");
+		driver.get("http://demo.whitecircleschool.com/");
 		
 		
 		
 		
+	}
+	
+	@AfterTest
+	
+	public void closeBrowser() {
+		
+		driver.quit();
 	}
 
 }

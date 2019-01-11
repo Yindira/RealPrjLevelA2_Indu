@@ -20,6 +20,20 @@ public class LoginPage {
 	@CacheLookup
 	private WebElement loginBtn;
 	
+	@FindBy(id ="work")
+	@CacheLookup
+	private WebElement workBtn;
+	
+	@FindBy(xpath = "//a[contains(@href,'a2')]")
+	@CacheLookup
+	private WebElement a2Prj;
+	
+	@FindBy(xpath = "//a[contains(@href,'branches')]")
+	@CacheLookup
+	private WebElement branches;
+	
+	
+	
 	public LoginPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
@@ -29,6 +43,9 @@ public class LoginPage {
 		username.sendKeys("Indu");
 		password.sendKeys("Drushru1");
 		loginBtn.click();
+		workBtn.click();
+		a2Prj.click();
+		branches.click();
 	}
 
 }
